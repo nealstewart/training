@@ -17,5 +17,7 @@ Furthermore, the service must meet the following requirements:
 * It must use Spring for injecting the singleton `MessageService` bean into the `MessageResource` bean
 * JAX RS / Jackson is used for serializing a `Message` DTO class into the REST response.
 * The project must be built as a docker image using a Dockerfile starting with `FROM ubuntu:trusty`, and run as a docker container.
+* The docker image must be built using maven using mvn package
+* Jetty, including the web-application, should start when docker start is issued for the created docker image.
 * You have to write every line of code yourself, but you can ask anyone for help. No-one is required to help though.
 
