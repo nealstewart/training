@@ -21,3 +21,27 @@ Furthermore, the service must meet the following requirements:
 * Jetty, including the web-application, should start when docker start is issued for the created docker image.
 * You have to write every line of code yourself, but you can ask anyone for help. No-one is required to help though.
 
+## Second iteration
+The second iteration consists adding a new REST resource to the project, such that the following curl:
+```
+curl -X GET http://localhost:8080/messages/recent
+```
+produces the JSON output:
+```json
+{"messageCount": 2,
+ "lastMessage": "2012-04-23T18:25:43.511Z",
+ "messages": [
+   {"message": { "content": "hello $name1"}},
+   {"message": { "content": "hello $name2"}}
+ ]
+}
+```
+The following requirements also have to be met:
+* `messageCount` is the number of messages in the messages array
+* The messages array is the list of the 10 (or less) most recent messages being produced by the POST resource `/messages/names/$name`
+* The `lastMessage` field contains the timestamp of the last message that was produced.
+* The messages are stored in a postgres database
+* The database schema is initialized during the bootup of the project. The database and user can be created manually.
+* The database is accessed using Spring JDBC
+* There is a `MessagesDAO` class that handles the interaction with the database.
+* The project build runs JUnit tests using Mockito for mock objects producing over 60% line coverage measured using Jacoco.
