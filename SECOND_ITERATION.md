@@ -18,7 +18,8 @@ produces the JSON output:
 }
 ```
 
-Requirements:
+### Requirements:
+
 - Endpoint matches specification above
 	- `messageCount` is the number of messages in the messages array
 	- Date format in JSON must be in [ISO 8601](https://en.wikipedia.org/?title=ISO_8601)
