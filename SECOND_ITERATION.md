@@ -37,4 +37,4 @@ produces the JSON output:
 	- All dependencies are mocked	
 	- Mockito is used for mock objects
 	- Jacoco is used for code coverage reporting
-  - Code covereage is over 60%
+  - Code coverage is over 60%
