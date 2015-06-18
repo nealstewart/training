@@ -28,7 +28,6 @@ produces the JSON output:
 - Messages are stored in a postgres database
 	- should be created in a docker image, based on the [official docker image](https://registry.hub.docker.com/_/postgres/)
 	- schema is initialized during the bootup of the project. The database and user can be created manually.
-	- 
 - A `MessagesDAO` class abstracts Java's interaction with the database.
 	- Resource -> Service -> DAO -> Database
 	- DAO should return DTOs to service layer.
