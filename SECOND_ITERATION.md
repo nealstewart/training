@@ -27,10 +27,11 @@ Requirements:
 - Messages are stored in a postgres database
 	- should be created in a docker image, based on the [official docker image](https://registry.hub.docker.com/_/postgres/)
 	- schema is initialized during the bootup of the project. The database and user can be created manually.
-	- accessed from Java using Spring JDBC
-- A `MessagesDAO` class handles the interaction with the database.
+	- 
+- A `MessagesDAO` class abstracts Java's interaction with the database.
 	- Resource -> Service -> DAO -> Database
 	- DAO should return DTOs to service layer.
+	- Spring JDBC should be used for database calls
 	- [More information on DAO pattern](https://en.wikipedia.org/wiki/Data_access_object)
 - Unit Tests are written for all classes
 	- All dependencies are mocked	
