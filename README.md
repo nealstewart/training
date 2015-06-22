@@ -29,12 +29,15 @@ a week, but that varies based on prior experience. The goal is to familiarize
 yourself with Tradeshift technologies, so when you find an area of a technology
 that interests you, follow that interest and learn.
 
-### Git Flow
+### Git Workflow
 
-1. Requirements are posted in master of this repository
-2. Fork this repository
-3. Complete work in fork
-4. Open Pull Request from fork to branch of original repository, based on GitHub account name:
+Pull Requests will be managed using the [Forking Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow)
+
+The gist of this is as follows
+
+1. Fork this repository
+2. Complete work in fork
+3. Open Pull Request from fork to branch of original repository, based on GitHub account name:
   - e.g. trainee-account-name codechallenge-electra:master -> nealstewart codechallenge-electra:trainee-account-name
 
 ### Schedule
