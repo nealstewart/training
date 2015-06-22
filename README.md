@@ -22,6 +22,7 @@ any other employee for advice.
 
 - [First Iteration](FIRST_ITERATION.md)
 - [Second Iteration](SECOND_ITERATION.md)
+- [Third Iteration](THIRD_ITERATION.md)
 
 The work is split into several iterations. Each iteration seems to take about
 a week, but that varies based on prior experience. The goal is to familiarize
