@@ -3,17 +3,25 @@
 The second iteration consists adding a new REST resource to the project, such that the following curl:
 
 ```
-curl -X GET http://localhost:8080/messages/recent
+curl -X GET http://localhost:8080/messages?limit=10
 ```
 
 produces the JSON output:
 
 ```json
-{"messageCount": 2,
- "lastMessage": "2012-04-23T18:25:43.511Z",
+{
+ "count": 2,
  "messages": [
-	 {"message": { "content": "hello $name1"}},
-	 {"message": { "content": "hello $name2"}}
+	 {
+			"user": "bob",
+			"message": "bar",
+			"postedAt": "2012-04-23T18:25:00.511Z"
+	 },
+   {
+		 "user": "bob",
+		 "message": "bar",
+		 "postedAt": "2012-04-23T18:20:00.511Z"
+   }
  ]
 }
 ```
@@ -21,10 +29,9 @@ produces the JSON output:
 ### Requirements:
 
 - Endpoint matches specification above
-	- `messageCount` is the number of messages in the messages array
-	- Date format in JSON must be in [ISO 8601](https://en.wikipedia.org/?title=ISO_8601)
-	- The messages array is the list of the 10 (or less) most recent messages being produced by the POST resource `/messages/names/$name`
-	- The `lastMessage` field contains the timestamp of the last message that was produced.
+	- `count` is the number of messages that have been submitted to the server
+	- The messages array is the most recent messages.
+	- The limit query parameter should be respected
 - Messages are stored in a postgres database
 	- should be created in a docker image, based on the [official docker image](https://registry.hub.docker.com/_/postgres/)
 	- schema is initialized during the bootup of the project. The database and user can be created manually.
