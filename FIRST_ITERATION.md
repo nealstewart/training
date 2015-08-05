@@ -19,7 +19,7 @@ and produces a response with header Content-Type: application/json and JSON payl
 
 Furthermore, the service must meet the following requirements:
 
-* Code must be written in java
+* Code must be written in Java
 * Maven is used to build the project and produce a war file
 * Jetty is used as the web server
 * The REST interface is produced by Jersey
